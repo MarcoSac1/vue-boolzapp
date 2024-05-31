@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header class="green">
+
+    </header>
     <div id="app">
         <main>
             <aside>
@@ -27,8 +30,9 @@
                 <input type="text" name="search" placeholder="cerca o inizia una nuova chat"> 
                 <section class="contactContainer">
                     <ul class="friend-list">
-                        <li class=" list-item">
-
+                        <li class="list-item dflex" v-for="(item, index) in contacts" :key="index">
+                            <img :src="`${item.avatar}.jpg`"/>
+                            <h3>{{ item.name }}</h3>
                         </li>
                     </ul>
                 </section>

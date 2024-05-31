@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+.green{
+    background-color: #009688;
+    height: 150px;
+}
+
+#app{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+}
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
@@ -13,6 +24,7 @@ body{
 aside{
     max-width: 400px;
     background-color:#eaeaea;
+    border-right:1px solid #eaeaea;
 }
 
 .dflex{
@@ -41,4 +53,8 @@ input{
 
 .contactContainer{
     background-color: white;
+}
+
+.list-item{
+    border-top:1px solid #eaeaea;
 }
