@@ -54,12 +54,31 @@ img{
     
 }
 
+#bell{
+    background-color: white;
+    padding: .6rem;
+    border-radius: 50%;
+    margin: .5rem;
+    color: #8edafc;
+}
+
+
+button{
+    border: none;
+    height: 30px;
+    border-radius: .25rem 0rem 0rem .25rem;
+    padding: .5rem;
+    color: #eaeaea;
+    background-color: white;
+    margin-left: .33rem;
+}
+
 input{
     border: none;
-    width: 95%;
+    width: 90%;
     height: 30px;
-    border-radius: .25rem;
-    margin: .3rem;
+    border-radius: 0rem .25rem 0rem .25rems;
+    margin: .3rem 0;
 }
 
 .contactContainer{
