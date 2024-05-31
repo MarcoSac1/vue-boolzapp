@@ -175,11 +175,12 @@ createApp({
     methods: {
         getMessages(){
             return this.contacts[this.activeChat].messages
+            // console.log(this.activeContact);
         },
 
         focusContact: function(index){
-            this.activeContact = index
-            console.log(this.activeContact);
+            this.activeChat = index
+            console.log(this.activeChat);
         }
     }
 }).mount('#app')

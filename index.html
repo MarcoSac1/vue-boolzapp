@@ -30,11 +30,11 @@
             </section>
             <section class="bg-gray dflex">
                 <button><i class="fa-solid fa-magnifying-glass"></i> </button>
-                <input type="search" name="search" placeholder="cerca o inizia una nuova chat"> 
+                <input type="search" name="find contacts" placeholder="cerca o inizia una nuova chat"> 
             </section>
             <section class="contactContainer">
                 <ul class="friend-list">
-                    <li class="list-item dflex" v-for="(item, index) in contacts" :key="index">
+                    <li class="list-item dflex" v-for="(item, index) in contacts" :key="index" @click="focusContact(index)" >
                         <img :src="`${item.avatar}.jpg`"/>
                         <h3>{{ item.name }}</h3>
                     </li>
@@ -46,16 +46,15 @@
                 <header class="dflex">
                     <img src="./img/avatar_5.jpg" alt="userPic">
                     <div>
-                        <h3>Marco</h3>
+                        <h3>{{contacts[activeChat].name}}</h3>
                         <p>last Seen 13:30</p>
                     </div>
                 </header>
                 <div class="msgwrapper">
-                    <div v-for="(element, index) in getMessages()" :key="index">
-                        <h1>
-                            {{ element.messages }}
-                        </h1>
-
+                    <div v-for="(element, index) in getMessages()" :key="index" :class="element.status">
+                        <p>
+                            {{ element.message }}
+                        </p>
                     </div>
                 </div>
                 <div class="bg-gray dflex">
