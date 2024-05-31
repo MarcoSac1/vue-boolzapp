@@ -10,22 +10,28 @@
 }
 
 #app{
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
     position: relative;
     top: -80px;
+    display: flex;
+    height: 800px;
+    
 }
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #d8dbd5;
 }
 
 aside{
-    max-width: 400px;
-    background-color:#eaeaea;
+    width: 400px;
+    height: 800px;
+    background-color: white;
     border-right:1px solid #eaeaea;
 }
+
 
 .dflex{
     display: flex;
@@ -43,6 +49,11 @@ img{
     background-color: #8edafc;
 }
 
+.bg-gray{
+    background-color: #eaeaea;
+    
+}
+
 input{
     border: none;
     width: 95%;
@@ -55,6 +66,26 @@ input{
     background-color: white;
 }
 
+li:hover{
+    background-color: #eaeaea;
+}
+
+
 .list-item{
     border-top:1px solid #eaeaea;
+}
+
+.msgContainer{
+    width: 800px;
+    
+}
+
+header{
+    background-color: #eaeaea;
+    
+}
+
+.msgwrapper{
+    height: calc(100% - 61px);
+    background-image: url(../img/mine.jpg);
 }

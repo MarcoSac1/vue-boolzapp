@@ -14,30 +14,50 @@
 
     </header>
     <div id="app">
+        <aside>
+            <header class="dflex">
+                <img src="./img/avatar_5.jpg" alt="userPic">
+                <h3>Marco</h3>
+            </header>
+            <section class="notify dflex">
+                <img src="./img/avatar_1.jpg" alt="userPic">
+                <span>
+                    <h4>Ricevi notifiche di nuovi messagi</h4>
+                    <p>Attiva notifiche desktop</p>
+                </span>
+            </section>
+            <section class="bg-gray dflex">
+                <input type="text" name="search" placeholder="cerca o inizia una nuova chat"> 
+            </section>
+            <section class="contactContainer">
+                <ul class="friend-list">
+                    <li class="list-item dflex" v-for="(item, index) in contacts" :key="index">
+                        <img :src="`${item.avatar}.jpg`"/>
+                        <h3>{{ item.name }}</h3>
+                    </li>
+                </ul>
+            </section>
+        </aside>
         <main>
-            <aside>
+        <section class="msgContainer">
                 <header class="dflex">
                     <img src="./img/avatar_5.jpg" alt="userPic">
-                    <h3>Marco</h3>
+                    <div>
+                        <h3>Marco</h3>
+                        <p>last Seen 13:30</p>
+                    </div>
                 </header>
-                <section class="notify dflex">
-                    <img src="./img/avatar_1.jpg" alt="userPic">
-                    <span>
-                        <h4>Ricevi notifiche di nuovi messagi</h4>
-                        <p>Attiva notifiche desktop</p>
-                    </span>
-                </section>
-                <input type="text" name="search" placeholder="cerca o inizia una nuova chat"> 
-                <section class="contactContainer">
-                    <ul class="friend-list">
-                        <li class="list-item dflex" v-for="(item, index) in contacts" :key="index">
-                            <img :src="`${item.avatar}.jpg`"/>
-                            <h3>{{ item.name }}</h3>
-                        </li>
-                    </ul>
-                </section>
-            </aside>
-            <section class="msgContainer">
+                <div class="msgwrapper">
+                    <div v-for="(element, index) in getMessages()" :key="index">
+                        <h1>
+                            {{ element.messages }}
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="bg-gray dflex">
+                    <input type="text" name="search" placeholder="cerca o inizia una nuova chat"> 
+                </div>
             </section>
         </main>
     </div>
