@@ -206,16 +206,9 @@ createApp({
             this.newInputContent ='';
         },
 
-        
-
-        // risposta: setTimeout(() => {
-        //     const newMessageSent  = {
-        //         message: 'ok',
-        //         status: 'received',
-        //     }
-        //     this.contacts[this.activeChat].messages.push(newMessageSent);
-        //     this.clearInput();
-        //     console.log(risposta);
-        // }, 1000)
+        search: function () {
+            
+            console.log(Keyup.enter);
+        }
     }
 }).mount('#app')

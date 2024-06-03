@@ -37,7 +37,7 @@
             </section>
             <section class="bg-gray dflex">
                 <button><i class="fa-solid fa-magnifying-glass"></i> </button>
-                <input type="search" name="find contacts" placeholder="cerca o inizia una nuova chat"> 
+                <input type="search" name="find contacts" placeholder="cerca o inizia una nuova chat" @keyup.enter="search(index)"> 
             </section>
             <section class="contactContainer">
                 <ul class="friend-list">
