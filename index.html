@@ -12,14 +12,21 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="green">
+    <!-- <header class="green">
 
-    </header>
+    </header> -->
     <div id="app">
         <aside>
-            <header class="dflex">
-                <img src="./img/avatar_5.jpg" alt="userPic">
-                <h3>Marco</h3>
+            <header class="dflex between">
+                <div class="dflex">
+                    <img src="./img/avatar_5.jpg" alt="userPic">
+                    <h3>Marco</h3>
+                </div>
+                <div>
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
             </header>
             <section class="notify dflex">
                 <span id="bell"><i class="fa-solid fa-bell-slash"></i></span>
@@ -43,14 +50,18 @@
         </aside>
         <main>
         <section class="msgContainer">
-                <header class="dflex">
-                    <img src="./img/avatar_5.jpg" alt="userPic">
-                    <div>
+                <header class="dflex between">
+                    <div class="dflex">
+                        <img src="./img/avatar_5.jpg" alt="userPic">
                         <h3>{{contacts[activeChat].name}}</h3>
-                        <p>last seen 13:30</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
-                <div class="msgwrapper">
+                <div class="msgwrapper dflex-column">
                     <div v-for="(element, index) in getMessages()" :key="index" :class="element.status">
                         <p>
                             {{ element.message }}
@@ -58,7 +69,9 @@
                     </div>
                 </div>
                 <div class="bg-gray dflex">
+                    <i class="fa-regular fa-face-smile"></i>
                     <input type="text" name="search" placeholder="cerca o inizia una nuova chat"> 
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
             </section>
         </main>

@@ -11,18 +11,19 @@
 
 #app{
     width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    top: -80px;
+    margin: auto;
+    
     display: flex;
     height: 800px;
+    margin-top: 2rem;
     
 }
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #d8dbd5;
+    background: linear-gradient(to bottom, #009688 20%, #d9dbd3 50%, #d9dbd3 100%);
+    height: 100%;
 }
 
 aside{
@@ -37,6 +38,17 @@ aside{
     display: flex;
     align-items: center;
     justify-content: flex-start
+}
+
+.between{
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+div > i{
+    padding-right: .8rem;
+    color: #b1b1b1;
 }
 
 img{
@@ -95,8 +107,7 @@ li:hover{
 }
 
 .msgContainer{
-    width: 800px;
-    
+    width: 800px;    
 }
 
 header{
@@ -105,21 +116,40 @@ header{
 }
 
 .msgwrapper{
-    height: calc(100% - 61px);
+    height: calc(759px - 64px);
     background-image: url(../img/mine.jpg);
+    padding: 4rem;
 }
 
+.dflex-column{
+    display: flex;
+    flex-direction: column;
+}
 .sent{
     background-color:#d5f9ba;
-    padding: .33rem;
+    padding: .6rem;
     margin: .33rem;
     border-radius: .5rem;
-    justify-content: end;
+    align-self: flex-end;
 }
 
 .received{
     background-color:#ffffff;
-    padding: .33rem;
+    padding: .6rem;
     margin: .33rem;
     border-radius: .5rem;
+    align-self: flex-start;
+}
+
+.msgContainer > div > input{
+    justify-content: center;
+    border-radius: .25rem;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    
+}
+
+.msgContainer i {
+    padding-left: .8rem;
 }
