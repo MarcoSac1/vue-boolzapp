@@ -168,7 +168,7 @@ createApp({
                 }
             ],
         activeChat: 0,
-
+        sendNewMessage:'',
         }
     },
 
@@ -181,6 +181,19 @@ createApp({
         focusContact: function(index){
             this.activeChat = index
             console.log(this.activeChat);
+        },
+
+        sendNewMessage: function (newContent) {
+            const newMessage = {
+                message: newContent,
+                status: 'sent',
+            }
+            this.messages.push(newMessage);
+            this.clearInput();
+        },
+
+        clearInput(){
+            this.newInputContent ='';
         }
     }
 }).mount('#app')
