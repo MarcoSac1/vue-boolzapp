@@ -208,7 +208,7 @@ createApp({
         },
 
         search: function () {
-            const cerca = searchUs;
+            this.searchUs='';
             this.contacts.filter().toLowerCase()
             this.clearInput();
             console.log(cerca);
