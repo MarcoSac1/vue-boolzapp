@@ -209,9 +209,9 @@ createApp({
 
         search: function () {
             this.searchUs='';
-            this.contacts.filter().toLowerCase()
+            this.contacts[this.activeChat].filter().toLowerCase()
             this.clearInput();
-            console.log(cerca);
+            console.log(search);
         },
     }
 }).mount('#app')
