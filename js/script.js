@@ -192,9 +192,21 @@ createApp({
             this.contacts[this.activeChat].messages.push(newMessageSent);
             this.clearInput();
         },
+        
 
         clearInput(){
             this.newInputContent ='';
-        }
+        },
+
+        
+
+        // risposta: setTimeout(() => {
+        //     const newMessageSent  = {
+        //         message: 'ok',
+        //         status: 'received',
+        //     }
+        //     this.contacts[this.activeChat].messages.push(newMessageSent);
+        //     this.clearInput();
+        // }, 1000)
     }
 }).mount('#app')
