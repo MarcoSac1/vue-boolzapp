@@ -208,10 +208,10 @@ createApp({
         },
 
         search: function () {
-            
+            const cerca = searchUs;
             this.contacts.filter().toLowerCase()
             this.clearInput();
-            console.log(search);
+            console.log(cerca);
         },
     }
 }).mount('#app')
