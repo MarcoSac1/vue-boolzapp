@@ -119,6 +119,7 @@ header{
     height: calc(759px - 64px);
     background-image: url(../img/mine.jpg);
     padding: 4rem;
+    overflow: auto;
 }
 
 .dflex-column{

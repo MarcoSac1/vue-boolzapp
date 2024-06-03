@@ -168,7 +168,8 @@ createApp({
                 }
             ],
         activeChat: 0,
-        sendNewMessage:'',
+        newMessage:'',
+        newInputContent:'',
         }
     },
 
@@ -184,11 +185,11 @@ createApp({
         },
 
         sendNewMessage: function (newContent) {
-            const newMessage = {
+            const newMessageSent  = {
                 message: newContent,
                 status: 'sent',
             }
-            this.messages.push(newMessage);
+            this.contacts[this.activeChat].messages.push(newMessageSent);
             this.clearInput();
         },
 
