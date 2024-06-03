@@ -170,6 +170,7 @@ createApp({
         activeChat: 0,
         newMessage:'',
         newInputContent:'',
+        searchUs:'',
         }
     },
 
@@ -208,7 +209,9 @@ createApp({
 
         search: function () {
             
-            console.log(Keyup.enter);
-        }
+            this.contacts.filter().toLowerCase()
+            this.clearInput();
+            console.log(search);
+        },
     }
 }).mount('#app')
