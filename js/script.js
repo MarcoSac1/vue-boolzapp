@@ -200,13 +200,14 @@ createApp({
 
         
 
-        // risposta: setTimeout(() => {
-        //     const newMessageSent  = {
-        //         message: 'ok',
-        //         status: 'received',
-        //     }
-        //     this.contacts[this.activeChat].messages.push(newMessageSent);
-        //     this.clearInput();
-        // }, 1000)
+        risposta: setTimeout(() => {
+            const newMessageSent  = {
+                message: 'ok',
+                status: 'received',
+            }
+            this.contacts[this.activeChat].messages.push(newMessageSent);
+            this.clearInput();
+            console.log(risposta);
+        }, 1000)
     }
 }).mount('#app')
