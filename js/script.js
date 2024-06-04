@@ -208,11 +208,16 @@ createApp({
         },
 
         searchAddress: function () {
+            if(this.searchUs === ''){
+                return this.contacts;
+            }
             const contatti = this.contacts.filter((element) => {
-                return element.name === this.searchUs;
                 
+                console.log(element.name , this.searchUs);
+                return (element.name.toLowerCase().includes(this.searchUs));
             });
             console.log(contatti);
+            return contatti;
         }
     
         // search: function () {

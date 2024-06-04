@@ -38,7 +38,7 @@
             </section>
             <section class="contactContainer">
                 <ul class="friend-list">
-                    <li class="list-item dflex" v-for="(item, index) in contacts" :key="index" @click="focusContact(index)" >
+                    <li class="list-item dflex" v-for="(item, index) in searchAddress()" :key="index" @click="focusContact(index)" >
                         <img :src="`${item.avatar}.jpg`"/>
                         <h4>{{ item.name }}</h4>
                     </li>
