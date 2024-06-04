@@ -207,11 +207,20 @@ createApp({
             this.newInputContent ='';
         },
 
-        search: function () {
-            this.searchUs='';
-            this.contacts[this.activeChat].filter().toLowerCase()
-            this.clearInput();
-            console.log(search);
-        },
-    }
-}).mount('#app')
+        searchAddress: function () {
+            const contatti = this.contacts.filter((element) => {
+                return element.name === this.searchUs;
+                
+            });
+            console.log(contatti);
+        }
+    
+        // search: function () {
+            //     this.searchUs='';
+            //     this.contacts[this.activeChat].filter().toLowerCase()
+            //     this.clearInput();
+            //     console.log(search);
+            // },
+        }
+    }).mount('#app')
+    
