@@ -212,9 +212,7 @@ createApp({
                 return this.contacts;
             }
             const contatti = this.contacts.filter((element) => {
-                
                 console.log(element.name , this.searchUs);
-                return (element.name.toLowerCase().includes(this.searchUs));
             });
             console.log(contatti);
             return contatti;

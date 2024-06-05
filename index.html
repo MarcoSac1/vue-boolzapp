@@ -38,9 +38,11 @@
             </section>
             <section class="contactContainer">
                 <ul class="friend-list">
-                    <li class="list-item dflex" v-for="(item, index) in searchAddress()" :key="index" @click="focusContact(index)" >
-                        <img :src="`${item.avatar}.jpg`"/>
-                        <h4>{{ item.name }}</h4>
+                    <li class="list-item dflex" v-for="(item, index) in contacts" :key="index" @click="focusContact(index)">
+                        <template v-if=" item.name.toLowerCase().includes(this.searchUs) ">
+                            <img :src="`${item.avatar}.jpg`"/>
+                            <h4>{{ item.name }}</h4>
+                        </template>
                     </li>
                 </ul>
             </section>
@@ -49,9 +51,8 @@
         <section class="msgContainer">
                 <header class="dflex between">
                     <div class="dflex">
-                        <img src="./img/avatar_5.jpg" alt="userPic">
+                        <img src="`${contact[activeChat].avatar}.jpg`" alt="userPic"> 
                         <h3>{{contacts[activeChat].name}}</h3>
-                        <p></p>
                     </div>
                     <div>
                         <i class="fa-solid fa-magnifying-glass"></i>
